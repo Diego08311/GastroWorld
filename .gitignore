@@ -19,4 +19,4 @@ appsettings*.json
 secrets.json
 
 # Otros
-node_modules/
+node_modules/"AppData/" 
