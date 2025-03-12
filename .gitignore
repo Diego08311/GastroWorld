@@ -1,17 +1,22 @@
-# Archivos de Visual Studio
-.vs/
-*.suo
-*.user
-*.cache
-*.sdf
-*.log
-*.tlog
-*.db
-*.opendb
-
-# Archivos de compilación
+# Archivos binarios y de compilación
 bin/
 obj/
 
-# Configuración específica del usuario
-*.userprefs
+# Configuración de Visual Studio
+.vs/
+
+# Archivos de usuario
+*.user
+*.suo
+*.csproj.user
+
+# Caché y temporales
+*.log
+*.cache
+
+# Configuración local
+appsettings*.json
+secrets.json
+
+# Otros
+node_modules/
