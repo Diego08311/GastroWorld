@@ -9,7 +9,7 @@ namespace Gastroworld.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Receta> Recetas { get; set; }
         public DbSet<Ingrediente> Ingredientes { get; set; }
         public DbSet<RecetaIngrediente> RecetaIngredientes { get; set; }
@@ -27,7 +27,7 @@ namespace Gastroworld.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Usuario>().ToTable("Usuario");
+            modelBuilder.Entity<Usuarios>().ToTable("Usuarios");
             modelBuilder.Entity<Receta>().ToTable("Receta");
             modelBuilder.Entity<Ingrediente>().ToTable("Ingrediente");
             modelBuilder.Entity<RecetaIngrediente>().ToTable("RecetaIngrediente");

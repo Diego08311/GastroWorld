@@ -11,11 +11,11 @@ namespace GastroWorld.Models.Model
 
         [Required, ForeignKey("UsuarioEmisor")]
         public int UsuarioEmisorId { get; set; }
-        public Usuario UsuarioEmisor { get; set; }
+        public Usuarios UsuarioEmisor { get; set; }
 
         [Required, ForeignKey("UsuarioReceptor")]
         public int UsuarioReceptorId { get; set; }
-        public Usuario UsuarioReceptor { get; set; }
+        public Usuarios UsuarioReceptor { get; set; }
 
         [Required]
         public string Contenido { get; set; }

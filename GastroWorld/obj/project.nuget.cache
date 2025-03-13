@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aMeoMi4gQpw=",
+  "dgSpecHash": "8OUunH4Rqwk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\victo\\OneDrive\\Escritorio\\Proyectos\\GastroWorld\\GastroWorld\\GastroWorld.csproj",
+  "projectFilePath": "C:\\Users\\victo\\OneDrive\\Escritorio\\GastroWorld\\GastroWorld\\GastroWorld.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\victo\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

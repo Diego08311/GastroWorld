@@ -1,14 +1,34 @@
-using System.Security.Principal;
+﻿using System.Security.Principal;
+using Gastroworld.Data;
 using GastroWorld.Models;
+using GastroWorld.Models.IModel;
+using GastroWorld.Models.Repositories;
+using GastroWorld.Repositories;
 using Microsoft.EntityFrameworkCore;
 
+//ConexionBd
 var builder = WebApplication.CreateBuilder(args);
 
-//ConexionBd
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddAuthentication(); 
+builder.Services.AddAuthorization();
 builder.Services.AddControllersWithViews();
+
+
+// 🔹 Agregar conexión a la base de datos MySQL antes de `builder.Build()`
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySql(
+        connectionString,
+        new MySqlServerVersion(new Version(8, 0, 25)) // Ajusta la versión de MySQL según corresponda
+    ));
+
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+//builder.Services.AddScoped<IPacienteRepository, PacienteRepository>();
+//builder.Services.AddScoped<ITipoEspecieRepository, TipoEspecieRepository>();
+//builder.Services.AddScoped<IEstadoCitaRepository, EstadoCitaRepository>();
 
 var app = builder.Build();
 
@@ -25,7 +45,13 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+
+app.MapControllerRoute(
+    name: "api",
+    pattern: "api/{controller=Registro}/{action=Register}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

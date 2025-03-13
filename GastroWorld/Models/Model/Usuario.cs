@@ -6,28 +6,31 @@ using GastroWorld.Models.Model;
 
 namespace Gastroworld.Models.Model
 {
-    public class Usuario
+    public class Usuarios
     {
         [Key]
-        public int Id { get; set; }
+        public int id_usuario { get; set; }
 
         [Required, MaxLength(100)]
-        public string Nombre { get; set; }
+        public string nombre { get; set; }
 
         [Required, MaxLength(100)]
-        public string LUsuario {  get; set; }
+        public string usuario {  get; set; }
 
         [Required, MaxLength(150)]
-        public string Email { get; set; }
+        public string email { get; set; }
 
         [Required, MaxLength(255)]
-        public string Password { get; set; }
+        public string password { get; set; }
+
+        [Required, MaxLength(100)]
+        public string  tipo_usuario { get; set; }
+
+        //[Required]
+        //public string Foto { get; set; }
 
         [Required]
-        public string Foto { get; set; }
-
-        [Required]
-        public DateTime FechaRegistro { get; set; } = DateTime.UtcNow;
+        public DateTime fecha_registro { get; set; } = DateTime.UtcNow;
 
         public ICollection<Receta> Recetas { get; set; }
         public ICollection<Publicacion> Publicaciones { get; set; }

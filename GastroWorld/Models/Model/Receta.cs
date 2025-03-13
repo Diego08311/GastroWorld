@@ -11,7 +11,7 @@ namespace GastroWorld.Models.Model
 
         [Required, ForeignKey("Usuario")]
         public int UsuarioId { get; set; }
-        public Usuario Usuario { get; set; }
+        public Usuarios Usuario { get; set; }
 
         [Required, MaxLength(255)]
         public string Titulo { get; set; }

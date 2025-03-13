@@ -191,7 +191,6 @@ C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\n
 C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\net8.0\GastroWorld.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\net8.0\GastroWorld.RazorAssemblyInfo.cache
 C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\net8.0\GastroWorld.RazorAssemblyInfo.cs
-C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\net8.0\GastroWorld.sourcelink.json
 C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\net8.0\scopedcss\bundle\GastroWorld.styles.css
 C:\Users\victo\OneDrive\Escritorio\Proyectos\GastroWorld\GastroWorld\obj\Debug\net8.0\scopedcss\projectbundle\GastroWorld.bundle.scp.css
